@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://bnm2fypv4nw3m"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_8ark8"]
+
+[resource]
+script = ExtResource("1_8ark8")
+id = &"icicle"
+name = "Icicle"
+description = "Deal 40 damage. Slow any item by 3."
+cost = 1
+cooldown_sec = 8.5
+effects = [{
+"type": "damage",
+"value": 40
+}, {
+"buff_type": "any",
+"type": "slow",
+"value": 3
+}]
+tags = Array[String](["damage", "slow", "magic"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

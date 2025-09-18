@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://c8bi18v3vi6im"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_kq6hs"]
+
+[resource]
+script = ExtResource("1_kq6hs")
+id = &"cyclops_eye"
+name = "Cyclops Eye"
+description = "Debuff damage heal shield by 10"
+cost = 1
+cooldown_sec = 8.0
+effects = [{
+"add_type": "single",
+"buff_type": "damage",
+"type": "debuff",
+"value": 10
+}, {
+"add_type": "single",
+"buff_type": "heal",
+"type": "debuff",
+"value": 10
+}, {
+"add_type": "single",
+"buff_type": "shield",
+"type": "debuff",
+"value": 10
+}]
+tags = Array[String](["bodypart", "debuff"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

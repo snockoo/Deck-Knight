@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://olqtlj1pnsnn"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_x2leq"]
+
+[resource]
+script = ExtResource("1_x2leq")
+id = &"glacial_core"
+name = "Glacial Core"
+description = "Shield 50. Slow any item by 1."
+cost = 1
+cooldown_sec = 6.0
+effects = [{
+"type": "shield",
+"value": 50
+}, {
+"buff_type": "any",
+"type": "slow",
+"value": 3
+}]
+tags = Array[String](["charge", "slow", "magic"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

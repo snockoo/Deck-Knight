@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://hlk8o5phpnna"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_1qqja"]
+
+[resource]
+script = ExtResource("1_1qqja")
+id = &"malakor_tail"
+name = "Malakor's Tail"
+description = "Poison 2 for every bodypart, Burn 8"
+cost = 1
+cooldown_sec = 8.0
+effects = [{
+"add_type": "multiple",
+"buff_type": "poison",
+"tags": "bodypart",
+"type": "additive",
+"value": 2
+}, {
+"type": "burn",
+"value": 8
+}]
+tags = Array[String](["bodypart", "burn", "poison"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

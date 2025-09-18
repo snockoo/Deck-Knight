@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://ygrw8pcyrnos"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_idfo3"]
+
+[resource]
+script = ExtResource("1_idfo3")
+id = &"obsidian_shrine"
+name = "Obsidian Shrine"
+description = "Damage 20 for every other shield cards."
+cost = 1
+cooldown_sec = 6.5
+effects = [{
+"add_type": "multiple",
+"buff_type": "damage",
+"tags": "shield",
+"type": "additive",
+"value": 20
+}]
+tags = Array[String](["damage", "property"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

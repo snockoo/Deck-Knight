@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://b0b6p1l6osxlm"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_eoe7y"]
+
+[resource]
+script = ExtResource("1_eoe7y")
+id = &"leather_cap"
+name = "Leather Cap"
+description = "Shields 25."
+cost = 1
+cooldown_sec = 5.0
+effects = [{
+"type": "shield",
+"value": 25
+}]
+tags = Array[String](["shield", "clothing"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

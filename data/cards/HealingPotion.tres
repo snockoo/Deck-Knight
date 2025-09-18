@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://dj4bsg4a3xxe0"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_m2bba"]
+
+[resource]
+script = ExtResource("1_m2bba")
+id = &"healing_potion"
+name = "Healing Potion"
+description = "Recover 80 health. Uses: 1"
+cost = 1
+cooldown_sec = 6.0
+effects = [{
+"ammo": 1,
+"type": "heal",
+"value": 80
+}]
+tags = Array[String](["heal", "potion"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

@@ -1,0 +1,140 @@
+[gd_scene load_steps=12 format=3 uid="uid://c2foxok23u4ut"]
+
+[ext_resource type="Script" uid="uid://dpi0yetpye4oc" path="res://guide.gd" id="1_de3e4"]
+[ext_resource type="Texture2D" uid="uid://cul1v7ey8hgtp" path="res://assets/sprites/UI_TravelBook_BookCover01a.png" id="1_feuw2"]
+[ext_resource type="Texture2D" uid="uid://bgefh5dww6ehq" path="res://assets/sprites/CardExample.png" id="2_83y8a"]
+[ext_resource type="FontFile" uid="uid://c4ht708w1wbb1" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_gajip"]
+[ext_resource type="FontFile" uid="uid://mcoukv50aceg" path="res://assets/fonts/PixelOperator8.ttf" id="3_83y8a"]
+[ext_resource type="Texture2D" uid="uid://yyx6kv163jb8" path="res://assets/sprites/UI_TravelBook_FrameSelect01a.png" id="5_rn84f"]
+[ext_resource type="Texture2D" uid="uid://dpki0xsx23s2w" path="res://assets/sprites/UI_TravelBook_Frame01a.png" id="6_de3e4"]
+[ext_resource type="Texture2D" uid="uid://csfbf4q2acpl1" path="res://assets/sprites/UI_TravelBook_FrameSelect01b.png" id="7_t7llt"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ql8b2"]
+texture = ExtResource("5_rn84f")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4xiro"]
+texture = ExtResource("6_de3e4")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0rcq0"]
+texture = ExtResource("7_t7llt")
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_de3e4")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_feuw2")
+expand_mode = 3
+
+[node name="Card" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(150, 200)
+layout_mode = 2
+offset_left = 60.0
+offset_top = 200.0
+offset_right = 212.0
+offset_bottom = 401.0
+size_flags_horizontal = 4
+texture = ExtResource("2_83y8a")
+stretch_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 54.0
+offset_top = 50.0
+offset_right = -64.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+
+[node name="Title" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_gajip")
+theme_override_font_sizes/font_size = 64
+text = "Guide"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("3_83y8a")
+theme_override_fonts/bold_font = ExtResource("2_gajip")
+text = "This is an autobattler game where you build your deck and battle against other opponents while your cards activate automatically according to their cooldown. The goal is to empty your opponent's health bar.
+
+
+
+
+
+						This is an example of a card. Each card has a name at the top, descriptions below it, then their tags
+						(which will be used for synergies), their cost (how much space this card takes), and their cooldown
+						in seconds.
+
+
+
+
+
+
+These are all the effects a card could have:
+
+Basics
+- Damage: Decreases target's health.
+- Heal: Increases the user's health and removes 5% of poison.
+- Shield: The user will have an additional layer on top of health to be reduced when taking damage and burn.
+- Lifesteal: Decreases target's health while also increases the user's health. Removes 5% of regeneration.
+
+Buffing
+- Buff: Increases the value of a certain effect on a friendly card.
+- Debuff: Decreases the value of a certain effect on an enemy card.
+
+Cooldown
+- Charge: Decreases the cooldown of a friendly card.
+- Slow: Increases the cooldown of an enemy card.
+
+Ticking
+- Burn: Deal damage every second according to burn. Burn will decrease by 1 for every 25 stacks.
+- Poison: Deal true damage that goes through shields every second according to poison. Can be removed using heal.
+- Regeneration: Heals the user every second according to regeneration. Can be removed using lifesteal.
+
+After the battle ends, if the player is still alive they can add a new card from their opponent's deck OR they can buff a selected card from their current deck. Buffs will increase a random card's effect by a certain amount.
+
+If the player loses the fight, they will lose 1 life and will stay on the current level without receiving any rewards. The game ends when the player loses 3 lives."
+
+[node name="Back" type="Button" parent="."]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -1500.0
+offset_top = -390.0
+offset_right = -1200.0
+offset_bottom = -340.0
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.2484, 0.2484, 0.2484, 1)
+theme_override_fonts/font = ExtResource("3_83y8a")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/hover = SubResource("StyleBoxTexture_ql8b2")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4xiro")
+theme_override_styles/normal = SubResource("StyleBoxTexture_0rcq0")
+text = "Back"
+expand_icon = true

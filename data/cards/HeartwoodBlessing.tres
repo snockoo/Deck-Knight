@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://dlrov4devuf7u"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_ndrx0"]
+
+[resource]
+script = ExtResource("1_ndrx0")
+id = &"heartwood_blessing"
+name = "Heartwood Blessing"
+description = "Heal 10, MaxHP 25, Charge friend by 2."
+cost = 1
+cooldown_sec = 6.0
+effects = [{
+"type": "heal",
+"value": 10
+}, {
+"type": "maxhp",
+"value": 25
+}, {
+"buff_type": "friend",
+"type": "charge",
+"value": 2
+}]
+tags = Array[String](["heal", "charge", "magic", "maxhp"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

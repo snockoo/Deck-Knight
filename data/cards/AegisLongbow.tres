@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://dwqq3q1pvbp4n"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_hck6a"]
+
+[resource]
+script = ExtResource("1_hck6a")
+id = &"aegis_longbow"
+name = "Aegis Longbow"
+description = "Deal 40 damage for every other damage cards."
+cost = 2
+cooldown_sec = 10.0
+effects = [{
+"add_type": "multiple",
+"buff_type": "damage",
+"tags": "damage",
+"type": "additive",
+"value": 40
+}, {
+"type": "heal",
+"value": 40
+}]
+tags = Array[String](["weapon", "damage", "heal", "magic"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

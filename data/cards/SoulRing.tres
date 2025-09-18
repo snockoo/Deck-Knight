@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://belvhpiuryemv"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_a7q8f"]
+
+[resource]
+script = ExtResource("1_a7q8f")
+id = &"soul_ring"
+name = "Soul Ring"
+description = "Regen 1 for every other poison cards."
+cost = 1
+cooldown_sec = 8.0
+effects = [{
+"add_type": "multiple",
+"buff_type": "regen",
+"tags": "poison",
+"type": "additive",
+"value": 1
+}]
+tags = Array[String](["regen", "clothing"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

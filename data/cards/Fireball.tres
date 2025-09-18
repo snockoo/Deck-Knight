@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://cxbj40skjtur1"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_ssmu6"]
+
+[resource]
+script = ExtResource("1_ssmu6")
+id = &"fireball"
+name = "Fireball"
+description = "Deal 20 damage. Burn 6"
+cost = 1
+cooldown_sec = 9.0
+effects = [{
+"type": "damage",
+"value": 20
+}, {
+"type": "burn",
+"value": 6
+}]
+tags = Array[String](["damage", "burn", "magic"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://yxj4sqmp58le"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_vtod4"]
+
+[resource]
+script = ExtResource("1_vtod4")
+id = &"buckler"
+name = "Buckler"
+description = "Shield 20."
+cost = 1
+cooldown_sec = 4.0
+effects = [{
+"type": "shield",
+"value": 20
+}]
+tags = Array[String](["shield"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

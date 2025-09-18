@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://bqw6e8u5t04e3"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_8uidv"]
+
+[resource]
+script = ExtResource("1_8uidv")
+id = &"little_prince"
+name = "Little Prince"
+description = "Shield 30. Debuff damage by 10."
+cost = 1
+cooldown_sec = 6.0
+effects = [{
+"type": "shield",
+"value": 30
+}, {
+"add_type": "single",
+"buff_type": "damage",
+"type": "debuff",
+"value": 10
+}]
+tags = Array[String](["shield", "friend", "debuff"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://cuntl1ttklf4"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_q61e7"]
+
+[resource]
+script = ExtResource("1_q61e7")
+id = &"rime_heart"
+name = "Rime Heart"
+description = "Shield 50. Regen 2 for every bodypart"
+cost = 2
+cooldown_sec = 8.0
+effects = [{
+"add_type": "multiple",
+"buff_type": "regen",
+"tags": "bodypart",
+"type": "additive",
+"value": 2
+}, {
+"type": "shield",
+"value": 50
+}]
+tags = Array[String](["bodypart", "shield", "regen", "magic"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

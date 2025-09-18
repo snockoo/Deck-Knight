@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://ciqi0yk7ma2tm"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_b88dt"]
+
+[resource]
+script = ExtResource("1_b88dt")
+id = &"Rapier"
+name = "Rapier"
+description = "Deal 40 damage. Charge a damage card by 1."
+cost = 1
+cooldown_sec = 6.0
+effects = [{
+"type": "damage",
+"value": 40
+}, {
+"buff_type": "weapon",
+"type": "charge",
+"value": 1
+}]
+tags = Array[String](["weapon", "damage", "charge"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

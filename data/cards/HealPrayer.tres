@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://b4gjh7ekheuhq"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_roanm"]
+
+[resource]
+script = ExtResource("1_roanm")
+id = &"heal_prayer"
+name = "Heal Prayer"
+description = "Heals 30 HP."
+cost = 1
+cooldown_sec = 5.0
+effects = [{
+"type": "heal",
+"value": 30
+}]
+tags = Array[String](["heal", "magic"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

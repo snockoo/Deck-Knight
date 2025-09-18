@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://b7261m80ygi11"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_nxfrk"]
+
+[resource]
+script = ExtResource("1_nxfrk")
+id = &"festering_bloom"
+name = "Festering Bloom"
+description = "Shield 25. Poison 5. Uses 1"
+cost = 1
+cooldown_sec = 12.0
+effects = [{
+"type": "shield",
+"value": 25
+}, {
+"ammo": 1,
+"type": "poison",
+"value": 5
+}]
+tags = Array[String](["heal", "poison", "secret", "blight"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://ce8gti5ajcsyo"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_25pd2"]
+
+[resource]
+script = ExtResource("1_25pd2")
+id = &"small_house"
+name = "Small House"
+description = "Shields 10. Scales by 10"
+cost = 1
+cooldown_sec = 7.0
+effects = [{
+"scaling": 10,
+"type": "shield",
+"value": 10
+}]
+tags = Array[String](["shield", "property"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

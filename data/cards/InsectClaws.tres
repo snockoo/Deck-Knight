@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://bd6dknvrvdbcq"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_j1rhk"]
+
+[resource]
+script = ExtResource("1_j1rhk")
+id = &"insect_claws"
+name = "Insect Claws"
+description = "Deal 20 damage. Poison 5."
+cost = 1
+cooldown_sec = 8.0
+effects = [{
+"type": "damage",
+"value": 20
+}, {
+"type": "poison",
+"value": 5
+}]
+tags = Array[String](["damage", "poison", "bodypart"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

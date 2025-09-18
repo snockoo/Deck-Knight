@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://beajohuvwyw5g"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_3ltve"]
+
+[resource]
+script = ExtResource("1_3ltve")
+id = &"magic_arrow"
+name = "Magic Arrow"
+description = "Deal 5 damage. Heal 5 HP"
+cost = 0
+cooldown_sec = 8.0
+effects = [{
+"type": "damage",
+"value": 5
+}, {
+"type": "heal",
+"value": 5
+}]
+tags = Array[String](["damage", "magic"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

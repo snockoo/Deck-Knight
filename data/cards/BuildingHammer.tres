@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://c51m75daok63n"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_mqqwg"]
+
+[resource]
+script = ExtResource("1_mqqwg")
+id = &"building_hammer"
+name = "Building Hammer"
+description = "Deal 20 damage. Charge a property by 1."
+cost = 1
+cooldown_sec = 5.0
+effects = [{
+"type": "damage",
+"value": 20
+}, {
+"buff_type": "property",
+"type": "charge",
+"value": 2
+}]
+tags = Array[String](["tool", "damage", "charge"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

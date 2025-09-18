@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://dkfqxam2x7f7x"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_wnpvm"]
+
+[resource]
+script = ExtResource("1_wnpvm")
+id = &"heartwood_animals"
+name = "Heartwood Animals"
+description = "Charge a heal 2. Charge a slow 2."
+cost = 1
+cooldown_sec = 6.0
+effects = [{
+"buff_type": "friend",
+"type": "charge",
+"value": 2
+}, {
+"buff_type": "slow",
+"type": "charge",
+"value": 2
+}]
+tags = Array[String](["friend", "charge"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

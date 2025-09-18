@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://sdftne3vo00x"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_6vjd4"]
+
+[resource]
+script = ExtResource("1_6vjd4")
+id = &"ogre_club"
+name = "Ogre Club"
+description = "Deals 140 damage. Debuff all damage by 2."
+cost = 2
+cooldown_sec = 11.0
+effects = [{
+"type": "damage",
+"value": 140
+}, {
+"add_type": "multiple",
+"buff_type": "damage",
+"type": "debuff",
+"value": 2
+}]
+tags = Array[String](["weapon", "damage", "debuff"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://cx37tglcomkoh"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_xwo63"]
+
+[resource]
+script = ExtResource("1_xwo63")
+id = &"tremor"
+name = "Tremor"
+description = "Slow by 1. Charge a weapon by 1."
+cost = 1
+cooldown_sec = 5.0
+effects = [{
+"buff_type": "damage",
+"type": "slow",
+"value": 1
+}, {
+"buff_type": "weapon",
+"type": "charge",
+"value": 1
+}]
+tags = Array[String](["charge", "slow", "magic"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

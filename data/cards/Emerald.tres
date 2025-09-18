@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://retvpch2op04"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_mycw2"]
+
+[resource]
+script = ExtResource("1_mycw2")
+id = &"emerald_jar"
+name = "Emerald Jar"
+description = "At the start of battle buff all poison by 3."
+cost = 1
+cooldown_sec = 0.1
+effects = [{
+"add_type": "multiple",
+"ammo": 1,
+"buff_type": "poison",
+"type": "buff",
+"value": 2
+}]
+tags = Array[String](["starter", "buff"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

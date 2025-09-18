@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://bqvkxxcgf4kua"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_f008a"]
+
+[resource]
+script = ExtResource("1_f008a")
+id = &"regen_potion"
+name = "Regeneration Potion"
+description = "Apply 5 regen. Uses: 1"
+cost = 1
+cooldown_sec = 8.0
+effects = [{
+"ammo": 1,
+"type": "regen",
+"value": 5
+}]
+tags = Array[String](["regen", "potion"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

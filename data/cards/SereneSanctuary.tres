@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://dus0knm53q2xl"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_oslwq"]
+
+[resource]
+script = ExtResource("1_oslwq")
+id = &"serene_sanctuary"
+name = "The Serene Sanctuary"
+description = "Regen 10. Increase max hp 50."
+cost = 2
+cooldown_sec = 15.0
+effects = [{
+"type": "regen",
+"value": 10
+}, {
+"type": "maxhp",
+"value": 50
+}]
+tags = Array[String](["regen", "maxhp", "property"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

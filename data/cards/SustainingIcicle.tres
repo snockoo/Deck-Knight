@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://bxb11wuqha2eq"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_nodu1"]
+
+[resource]
+script = ExtResource("1_nodu1")
+id = &"sustaining_icicle"
+name = "Sustaining Icicle"
+description = "Deal 80 damage. Slow damage item by 4."
+cost = 1
+cooldown_sec = 10.0
+effects = [{
+"type": "damage",
+"value": 80
+}, {
+"buff_type": "damage",
+"type": "slow",
+"value": 4
+}]
+tags = Array[String](["damage", "slow", "magic", "weapon"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

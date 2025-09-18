@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://cu2ibfi27ha2q"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_hnsd4"]
+
+[resource]
+script = ExtResource("1_hnsd4")
+id = &"living_armor"
+name = "Living Armor"
+description = "Whenever you deal damage, maxhp 25."
+cost = 1
+cooldown_sec = 99999.0
+effects = [{
+"buff_type": "maxhp",
+"type": "combo_damage",
+"value": 15
+}]
+tags = Array[String](["combo", "maxhp", "clothing"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

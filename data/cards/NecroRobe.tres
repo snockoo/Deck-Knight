@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://df1sod5mxhwgb"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_rp0lt"]
+
+[resource]
+script = ExtResource("1_rp0lt")
+id = &"necro_robe"
+name = "Necro Robe"
+description = "Charge lifesteal card by 2. Shield 45"
+cost = 2
+cooldown_sec = 9.0
+effects = [{
+"type": "shield",
+"value": 45
+}, {
+"buff_type": "lifesteal",
+"type": "charge",
+"value": 2
+}]
+tags = Array[String](["charge", "shield", "clothing"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

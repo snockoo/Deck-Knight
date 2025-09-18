@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://dv7tn5astcqpx"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_rki1k"]
+
+[resource]
+script = ExtResource("1_rki1k")
+id = &"holy_water"
+name = "Holy Water"
+description = "Reduce damage by 30. Uses: 1"
+cost = 1
+cooldown_sec = 7.5
+effects = [{
+"add_type": "single",
+"ammo": 1,
+"buff_type": "damage",
+"type": "debuff",
+"value": 30
+}]
+tags = Array[String](["debuff", "potion", "magic"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

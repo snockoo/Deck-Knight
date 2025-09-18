@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://conv57j28nhcj"]
+
+[ext_resource type="FontFile" uid="uid://mcoukv50aceg" path="res://assets/fonts/PixelOperator8.ttf" id="1_ds5wh"]
+[ext_resource type="Script" uid="uid://dtv26nprrovmq" path="res://floating_text.gd" id="2_8goxa"]
+
+[node name="FloatingText" type="Label"]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("1_ds5wh")
+theme_override_font_sizes/font_size = 8
+text = "aaaa"
+script = ExtResource("2_8goxa")

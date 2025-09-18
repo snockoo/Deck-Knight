@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://qdqkni1irnhx"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_6c8nb"]
+
+[resource]
+script = ExtResource("1_6c8nb")
+id = &"bear_skin"
+name = "Bear Skin"
+description = "At the start of battle shield 200 and buff shield by 20."
+cost = 1
+cooldown_sec = 0.1
+effects = [{
+"ammo": 1,
+"type": "shield",
+"value": 200
+}, {
+"add_type": "single",
+"ammo": 1,
+"buff_type": "shield",
+"type": "buff",
+"value": 20
+}]
+tags = Array[String](["shield", "starter", "bodypart", "buff"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

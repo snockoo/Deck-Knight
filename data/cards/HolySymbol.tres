@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://c58s3wtsntnvb"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_5oqb0"]
+
+[resource]
+script = ExtResource("1_5oqb0")
+id = &"holy_symbol"
+name = "Holy Symbol"
+description = "Heal 40. Regen 4."
+cost = 1
+cooldown_sec = 10.0
+effects = [{
+"type": "heal",
+"value": 40
+}, {
+"type": "regen",
+"value": 4
+}]
+tags = Array[String](["heal", "regen", "magic"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

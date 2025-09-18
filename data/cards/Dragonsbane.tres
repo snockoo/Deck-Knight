@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://dyjy7oeiw26k4"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_lvhow"]
+
+[resource]
+script = ExtResource("1_lvhow")
+id = &"dragonsbane"
+name = "Dragonsbane"
+description = "Deals 150 damage. Uses 1."
+cost = 2
+cooldown_sec = 9.0
+effects = [{
+"ammo": 1,
+"type": "damage",
+"value": 150
+}, {
+"add_type": "single",
+"ammo": 1,
+"buff_type": "burn",
+"type": "debuff",
+"value": 10
+}]
+tags = Array[String](["property", "damage", "debuff"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

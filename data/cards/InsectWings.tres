@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://b1u22yr02ub5f"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_m13py"]
+
+[resource]
+script = ExtResource("1_m13py")
+id = &"insect_wings"
+name = "Insect Wings"
+description = "Charge another bodypart card by 2 seconds."
+cost = 1
+cooldown_sec = 6.0
+effects = [{
+"buff_type": "bodypart",
+"type": "charge",
+"value": 2
+}]
+tags = Array[String](["charge", "bodypart"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

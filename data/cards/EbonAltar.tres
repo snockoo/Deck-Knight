@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://cvnmcyrb655t"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_u652r"]
+
+[resource]
+script = ExtResource("1_u652r")
+id = &"ebon_altar"
+name = "Ebon Altar"
+description = "Buffs single damage by 100. Buff all shield by -25. Buff all heal by -25"
+cost = 2
+cooldown_sec = 11.0
+effects = [{
+"add_type": "single",
+"buff_type": "damage",
+"type": "buff",
+"value": 100
+}, {
+"add_type": "multiple",
+"buff_type": "shield",
+"type": "buff",
+"value": -25
+}, {
+"add_type": "multiple",
+"buff_type": "heal",
+"type": "buff",
+"value": -25
+}]
+tags = Array[String](["buff", "property"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

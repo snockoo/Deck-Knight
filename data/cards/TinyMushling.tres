@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://dbqrj5hxxic8n"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_biwnm"]
+
+[resource]
+script = ExtResource("1_biwnm")
+id = &"tiny_mushling"
+name = "Tiny Mushling"
+description = "Heals 25 HP. Regen 2."
+cost = 1
+cooldown_sec = 8.0
+effects = [{
+"type": "heal",
+"value": 10
+}, {
+"type": "regen",
+"value": 2
+}]
+tags = Array[String](["heal", "regen", "friend"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

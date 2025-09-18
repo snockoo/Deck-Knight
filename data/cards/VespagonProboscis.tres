@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://85ef4uigl6yb"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_s4rfn"]
+
+[resource]
+script = ExtResource("1_s4rfn")
+id = &"vespagon_proboscis"
+name = "Vespagon's Proboscis"
+description = "Lifesteal 20 scales by 10"
+cost = 1
+cooldown_sec = 7.5
+effects = [{
+"scaling": 10,
+"type": "lifesteal",
+"value": 20
+}]
+tags = Array[String](["lifesteal", "bodypart"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

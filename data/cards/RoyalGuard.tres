@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://p1h6beg0jhpp"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_inv8b"]
+
+[resource]
+script = ExtResource("1_inv8b")
+id = &"royal_guard"
+name = "Royal Guard"
+description = "Shields 80. Buff a shield by 10."
+cost = 2
+cooldown_sec = 10.0
+effects = [{
+"type": "shield",
+"value": 80
+}, {
+"add_type": "single",
+"buff_type": "shield",
+"type": "buff",
+"value": 10
+}]
+tags = Array[String](["shield", "friend", "buff"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://faatp84hcq8l"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_4p2mk"]
+
+[resource]
+script = ExtResource("1_4p2mk")
+id = &"purple_mist"
+name = "Purple Mist"
+description = "Debuff a heal by 3."
+cost = 0
+cooldown_sec = 10.5
+effects = [{
+"add_type": "single",
+"buff_type": "heal",
+"type": "debuff",
+"value": 3
+}]
+tags = Array[String](["debuff", "magic"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

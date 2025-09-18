@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://kc3itlfra44m"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_amqov"]
+
+[resource]
+script = ExtResource("1_amqov")
+id = &"frozen_bludgeon"
+name = "Frozen Bludgeon"
+description = "Deal 100 damage. Slow any card by 2."
+cost = 1
+cooldown_sec = 8.0
+effects = [{
+"type": "damage",
+"value": 100
+}, {
+"buff_type": "any",
+"type": "slow",
+"value": 2
+}]
+tags = Array[String](["weapon", "damage", "slow"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://bto0rqh5cje3i"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_hqkds"]
+
+[resource]
+script = ExtResource("1_hqkds")
+id = &"squire"
+name = "Squire"
+description = "Whenever you deal damage, deal 10 damage."
+cost = 1
+cooldown_sec = 99999.0
+effects = [{
+"buff_type": "damage",
+"type": "combo_damage",
+"value": 10
+}]
+tags = Array[String](["combo", "friend"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

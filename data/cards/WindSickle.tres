@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://dpmcbenslwngd"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_t0747"]
+
+[resource]
+script = ExtResource("1_t0747")
+id = &"wind_sickle"
+name = "Wind Sickle"
+description = "Deal 15 three times."
+cost = 1
+cooldown_sec = 7.0
+effects = [{
+"type": "damage",
+"value": 15
+}, {
+"type": "damage",
+"value": 15
+}, {
+"type": "damage",
+"value": 15
+}]
+tags = Array[String](["damage", "magic"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

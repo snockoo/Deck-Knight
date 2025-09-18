@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://qirfg0dukbdi"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_c6x5n"]
+
+[resource]
+script = ExtResource("1_c6x5n")
+id = &"plague_cornerstone"
+name = "Plague Cornerstone"
+description = "Poison 20. Charge a friend by 3. Charge a poison by 5. Charge a shield by 3."
+cost = 3
+cooldown_sec = 15.0
+effects = [{
+"type": "poison",
+"value": 20
+}, {
+"buff_type": "poison",
+"type": "charge",
+"value": 5
+}, {
+"buff_type": "friend",
+"type": "charge",
+"value": 3
+}, {
+"buff_type": "shield",
+"type": "charge",
+"value": 3
+}]
+tags = Array[String](["poison", "weapon", "charge"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

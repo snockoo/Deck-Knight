@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://dn8ob7il4jbig"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_ids4a"]
+
+[resource]
+script = ExtResource("1_ids4a")
+id = &"cataclysm"
+name = "Cataclysm"
+description = "Deals 1000 damage. Burn 150. Uses 1."
+cost = 2
+cooldown_sec = 45.0
+effects = [{
+"type": "damage",
+"value": 1000
+}, {
+"type": "burn",
+"value": 150
+}]
+tags = Array[String](["magic", "damage", "burn", "demonic"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

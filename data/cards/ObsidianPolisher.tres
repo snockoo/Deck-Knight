@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://deixt0jbenb66"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_kl1kg"]
+
+[resource]
+script = ExtResource("1_kl1kg")
+id = &"obsidian_polish"
+name = "Obsidian Polish"
+description = "Buffs all damage cards by 10."
+cost = 1
+cooldown_sec = 9.0
+effects = [{
+"add_type": "multiple",
+"buff_type": "damage",
+"type": "buff",
+"value": 10
+}]
+tags = Array[String](["buff", "tool"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

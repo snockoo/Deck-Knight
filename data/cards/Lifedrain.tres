@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://36h5mufnt20y"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_ccxof"]
+
+[resource]
+script = ExtResource("1_ccxof")
+id = &"lifedrain"
+name = "Lifedrain"
+description = "Lifesteal 65."
+cost = 1
+cooldown_sec = 8.5
+effects = [{
+"type": "lifesteal",
+"value": 65
+}]
+tags = Array[String](["lifesteal", "magic"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

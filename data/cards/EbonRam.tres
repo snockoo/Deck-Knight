@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://qikmthp7685t"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_et8oj"]
+
+[resource]
+script = ExtResource("1_et8oj")
+id = &"ebon_ram"
+name = "Ebon Ram"
+description = "Deal 1 two times."
+cost = 0
+cooldown_sec = 12.0
+effects = [{
+"type": "damage",
+"value": 1
+}, {
+"type": "damage",
+"value": 1
+}]
+tags = Array[String](["damage", "friend", "secret", "demonic"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

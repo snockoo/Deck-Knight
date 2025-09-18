@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://byxp4tf7t6g57"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_rdw5a"]
+
+[resource]
+script = ExtResource("1_rdw5a")
+id = &"permafrost_spirit"
+name = "Permafrost Spirit"
+description = "Shield 100. Buff all slow by 1."
+cost = 2
+cooldown_sec = 10.0
+effects = [{
+"type": "shield",
+"value": 100
+}, {
+"add_type": "multiple",
+"buff_type": "slow",
+"type": "buff",
+"value": 1
+}]
+tags = Array[String](["shield", "buff", "magic", "friend"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

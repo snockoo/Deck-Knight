@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://b03vpr4imhc7k"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_jh8l1"]
+
+[resource]
+script = ExtResource("1_jh8l1")
+id = &"necronomicon"
+name = "Necronomicon"
+description = "Regen 10. Poison 10."
+cost = 2
+cooldown_sec = 9.0
+effects = [{
+"type": "regen",
+"value": 10
+}, {
+"type": "poison",
+"value": 10
+}, {
+"add_type": "multiple",
+"buff_type": "poison",
+"type": "buff",
+"value": 1
+}]
+tags = Array[String](["regen", "poison", "magic"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://do5f3su0y4jya"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_15oa5"]
+
+[resource]
+script = ExtResource("1_15oa5")
+id = &"obsidian_golem"
+name = "Obsidian Golem"
+description = "Deals 75 damage. Shield 40. Buff all shield 2."
+cost = 1
+cooldown_sec = 8.0
+effects = [{
+"scaling": 10,
+"type": "damage",
+"value": 75
+}, {
+"scaling": 10,
+"type": "shield",
+"value": 40
+}, {
+"add_type": "multiple",
+"buff_type": "shield",
+"type": "buff",
+"value": 2
+}]
+tags = Array[String](["friend", "damage", "shield", "magic", "buff"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://besyvomhlbt32"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_6wtus"]
+
+[resource]
+script = ExtResource("1_6wtus")
+id = &"small_crossbow"
+name = "Small Crossbow"
+description = "Deal 25 damage. Uses: 10"
+cost = 1
+cooldown_sec = 3.5
+effects = [{
+"ammo": 10,
+"type": "damage",
+"value": 25
+}]
+tags = Array[String](["weapon", "damage"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

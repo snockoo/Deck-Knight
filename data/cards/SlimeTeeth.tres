@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://4gychgx14de2"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_k23i0"]
+
+[resource]
+script = ExtResource("1_k23i0")
+id = &"slime_teeth"
+name = "Slime Teeth"
+description = "Deal 20 damage and Heal 20"
+cost = 1
+cooldown_sec = 4.5
+effects = [{
+"type": "lifesteal",
+"value": 20
+}]
+tags = Array[String](["lifesteal", "bodypart"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

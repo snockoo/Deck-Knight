@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://co5tff4rurhou"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_3ucfs"]
+
+[resource]
+script = ExtResource("1_3ucfs")
+id = &"lightning_strike_scroll"
+name = "Lightning Scroll"
+description = "Deal 80. Uses: 1"
+cost = 1
+cooldown_sec = 6.0
+effects = [{
+"ammo": 2,
+"type": "damage",
+"value": 80
+}]
+tags = Array[String](["damage", "magic"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

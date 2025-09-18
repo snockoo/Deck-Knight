@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://brjmeqcwjfry0"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_6a736"]
+
+[resource]
+script = ExtResource("1_6a736")
+id = &"wand"
+name = "Wand"
+description = "Deal 20 damage. Charge a magic item by 1."
+cost = 1
+cooldown_sec = 5.0
+effects = [{
+"type": "damage",
+"value": 20
+}, {
+"buff_type": "magic",
+"type": "charge",
+"value": 1
+}]
+tags = Array[String](["weapon", "damage", "charge"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

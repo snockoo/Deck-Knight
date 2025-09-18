@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://82anobbhqod0"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_k73fo"]
+
+[resource]
+script = ExtResource("1_k73fo")
+id = &"chain_armor"
+name = "Chain Armor"
+description = "Shields 100."
+cost = 2
+cooldown_sec = 11.0
+effects = [{
+"type": "shield",
+"value": 100
+}]
+tags = Array[String](["shield", "clothing"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://btrp80d7pvxoi"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_xjl6g"]
+
+[resource]
+script = ExtResource("1_xjl6g")
+id = &"watchtower"
+name = "Watchtower"
+description = "Whenever you deal damage, deal 40 damage."
+cost = 2
+cooldown_sec = 99999.0
+effects = [{
+"buff_type": "damage",
+"type": "combo_damage",
+"value": 40
+}]
+tags = Array[String](["combo", "property"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

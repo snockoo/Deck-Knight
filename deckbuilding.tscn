@@ -1,0 +1,167 @@
+[gd_scene load_steps=14 format=3 uid="uid://be7su53veybjo"]
+
+[ext_resource type="Script" uid="uid://d3tdtoujuif82" path="res://deckbuilding.gd" id="1_6yap2"]
+[ext_resource type="Texture2D" uid="uid://cul1v7ey8hgtp" path="res://assets/sprites/UI_TravelBook_BookCover01a.png" id="1_jk6il"]
+[ext_resource type="Texture2D" uid="uid://yyx6kv163jb8" path="res://assets/sprites/UI_TravelBook_FrameSelect01a.png" id="3_3ibo3"]
+[ext_resource type="FontFile" uid="uid://mcoukv50aceg" path="res://assets/fonts/PixelOperator8.ttf" id="3_813h3"]
+[ext_resource type="Texture2D" uid="uid://csfbf4q2acpl1" path="res://assets/sprites/UI_TravelBook_FrameSelect01b.png" id="3_udoxa"]
+[ext_resource type="Texture2D" uid="uid://dpki0xsx23s2w" path="res://assets/sprites/UI_TravelBook_Frame01a.png" id="4_813h3"]
+[ext_resource type="Texture2D" uid="uid://btntl2i524e4c" path="res://assets/sprites/UI_TravelBook_Popup01a.png" id="4_f0n3k"]
+[ext_resource type="FontFile" uid="uid://c4ht708w1wbb1" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="8_hqagp"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ptpel"]
+texture = ExtResource("4_f0n3k")
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f0n3k"]
+texture = ExtResource("3_3ibo3")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hqagp"]
+texture = ExtResource("4_813h3")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hg6jy"]
+texture = ExtResource("3_udoxa")
+
+[sub_resource type="Theme" id="Theme_f0n3k"]
+
+[node name="Deckbuilding" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6yap2")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_jk6il")
+expand_mode = 3
+
+[node name="Warnings" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1217.0
+offset_top = 746.0
+offset_right = 1497.0
+offset_bottom = 805.0
+theme_override_colors/font_color = Color(0.247059, 0.247059, 0.247059, 1)
+theme_override_fonts/font = ExtResource("3_813h3")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxTexture_ptpel")
+text = "Deck Size: 2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Battle" type="Button" parent="."]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -392.0
+offset_top = 346.0
+offset_right = -92.0
+offset_bottom = 396.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.247059, 0.247059, 0.247059, 1)
+theme_override_fonts/font = ExtResource("3_813h3")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/hover = SubResource("StyleBoxTexture_f0n3k")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_hqagp")
+theme_override_styles/normal = SubResource("StyleBoxTexture_hg6jy")
+text = "Battle"
+
+[node name="Retire" type="Button" parent="."]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -1530.0
+offset_top = 346.0
+offset_right = -1230.0
+offset_bottom = 396.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.247059, 0.247059, 0.247059, 1)
+theme_override_fonts/font = ExtResource("3_813h3")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/hover = SubResource("StyleBoxTexture_f0n3k")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_hqagp")
+theme_override_styles/normal = SubResource("StyleBoxTexture_hg6jy")
+text = "Retire"
+
+[node name="OwnedCards" type="Label" parent="."]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 132.0
+offset_right = 400.0
+offset_bottom = 172.0
+theme_override_fonts/font = ExtResource("3_813h3")
+theme_override_font_sizes/font_size = 32
+text = "Owned Cards: "
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+clip_contents = false
+layout_mode = 0
+offset_left = 50.0
+offset_top = 170.0
+offset_right = 1349.0
+offset_bottom = 380.0
+mouse_filter = 0
+theme = SubResource("Theme_f0n3k")
+
+[node name="Binder" type="HBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 0
+theme_override_constants/separation = 160
+
+[node name="CurrentDeck" type="Label" parent="."]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 439.0
+offset_right = 400.0
+offset_bottom = 524.0
+theme_override_fonts/font = ExtResource("3_813h3")
+theme_override_font_sizes/font_size = 32
+text = "Current Deck:"
+
+[node name="ScrollContainer2" type="ScrollContainer" parent="."]
+clip_contents = false
+layout_mode = 0
+offset_left = 50.0
+offset_top = 475.0
+offset_right = 1183.0
+offset_bottom = 685.0
+
+[node name="CurrentDeck" type="HBoxContainer" parent="ScrollContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 160
+
+[node name="Level" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -170.0
+offset_top = 50.0
+offset_right = 170.0
+offset_bottom = 90.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("8_hqagp")
+theme_override_font_sizes/font_size = 32
+text = "Level"
+horizontal_alignment = 1

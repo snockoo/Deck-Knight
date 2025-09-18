@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://bcvq182r7tlu6"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_tbe5v"]
+
+[resource]
+script = ExtResource("1_tbe5v")
+id = &"king_attendant"
+name = "King's Attendant"
+description = "lifesteal 25. Charge a weapon by 2."
+cost = 1
+cooldown_sec = 6.0
+effects = [{
+"type": "lifesteal",
+"value": 25
+}, {
+"buff_type": "weapon",
+"type": "charge",
+"value": 2
+}]
+tags = Array[String](["friend", "lifesteal", "charge"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

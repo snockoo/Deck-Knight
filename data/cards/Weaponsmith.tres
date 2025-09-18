@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://bt7u0ja4tjw3a"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_eun06"]
+
+[resource]
+script = ExtResource("1_eun06")
+id = &"weaponsmith"
+name = "Weaponsmith"
+description = "Charge a weapon 2. damage 10"
+cost = 1
+cooldown_sec = 8.0
+effects = [{
+"buff_type": "weapon",
+"type": "charge",
+"value": 2
+}, {
+"type": "damage",
+"value": 10
+}]
+tags = Array[String](["friend", "charge", "damage"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

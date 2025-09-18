@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://dykj1op52j8gh"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_juf7x"]
+
+[resource]
+script = ExtResource("1_juf7x")
+id = &"melting_ectoplasm"
+name = "Melting Ectoplasm"
+description = "Poison 1 Burn 1"
+cost = 0
+cooldown_sec = 10.5
+effects = [{
+"type": "poison",
+"value": 1
+}, {
+"type": "burn",
+"value": 1
+}]
+tags = Array[String](["poison", "magic", "burn"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://ccyoeiifeirh2"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_osolq"]
+
+[resource]
+script = ExtResource("1_osolq")
+id = &"goggles"
+name = "Goggles"
+description = "Shield 20. Charge a tool item by 1."
+cost = 1
+cooldown_sec = 6.0
+effects = [{
+"type": "shield",
+"value": 20
+}, {
+"buff_type": "tool",
+"type": "charge",
+"value": 1
+}]
+tags = Array[String](["clothing", "shield", "charge"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://guim3nn8apgm"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_h0ulg"]
+
+[resource]
+script = ExtResource("1_h0ulg")
+id = &"round_shield"
+name = "Round Shield"
+description = "Shield 40."
+cost = 1
+cooldown_sec = 6.0
+effects = [{
+"type": "shield",
+"value": 40
+}]
+tags = Array[String](["shield"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

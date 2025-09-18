@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://ddri7glqfefgt"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_og406"]
+
+[resource]
+script = ExtResource("1_og406")
+id = &"earth_totem"
+name = "Earth Totem"
+description = "Shield 5. Charge a magic by 1."
+cost = 1
+cooldown_sec = 4.0
+effects = [{
+"type": "shield",
+"value": 5
+}, {
+"buff_type": "magic",
+"type": "charge",
+"value": 1
+}]
+tags = Array[String](["charge", "shield"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

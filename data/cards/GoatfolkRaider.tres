@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://5rddmix0wgb5"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_mtipf"]
+
+[resource]
+script = ExtResource("1_mtipf")
+id = &"goatfolk_raider"
+name = "Goatfolk Raider"
+description = "Charge a friend 1. Damage 75."
+cost = 1
+cooldown_sec = 7.5
+effects = [{
+"buff_type": "friend",
+"type": "charge",
+"value": 1
+}, {
+"type": "damage",
+"value": 75
+}]
+tags = Array[String](["friend", "charge", "damage"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

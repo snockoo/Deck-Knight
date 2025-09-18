@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://bnpp7vn7lq3e5"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_n12w8"]
+
+[resource]
+script = ExtResource("1_n12w8")
+id = &"lantern"
+name = "Lantern"
+description = "Burn 7."
+cost = 1
+cooldown_sec = 9.0
+effects = [{
+"type": "burn",
+"value": 7
+}]
+tags = Array[String](["burn", "tool"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

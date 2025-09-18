@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://dwx4yfq0mj3r3"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_t0ljf"]
+
+[resource]
+script = ExtResource("1_t0ljf")
+id = &"pink_flower"
+name = "Pink Flower"
+description = "Reduce damage by 10."
+cost = 1
+cooldown_sec = 7.0
+effects = [{
+"add_type": "single",
+"buff_type": "damage",
+"type": "debuff",
+"value": 10
+}]
+tags = Array[String](["debuff"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

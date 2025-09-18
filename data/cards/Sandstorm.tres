@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://c00sbsjhgy0xa"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_nw82h"]
+
+[resource]
+script = ExtResource("1_nw82h")
+id = &"sandstorm"
+name = "Sandstorm"
+description = "Rapidly deals damage."
+cost = 2
+cooldown_sec = 0.5
+effects = [{
+"scaling": 2,
+"type": "damage",
+"value": 1
+}]
+tags = Array[String](["damage", "magic"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

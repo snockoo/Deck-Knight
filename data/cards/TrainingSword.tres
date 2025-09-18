@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://biwd4c8li8aap"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_0bjdc"]
+
+[resource]
+script = ExtResource("1_0bjdc")
+id = &"training_sword"
+name = "Training Sword"
+description = "Deal 10 damage. Increases damage by 10 on use."
+cost = 1
+cooldown_sec = 6.5
+effects = [{
+"scaling": 10,
+"type": "damage",
+"value": 10
+}]
+tags = Array[String](["weapon", "damage"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

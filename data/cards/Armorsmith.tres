@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://bd0xjoxrful6q"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_vgjdn"]
+
+[resource]
+script = ExtResource("1_vgjdn")
+id = &"armorsmith"
+name = "Armorsmith"
+description = "Charge a clothing 2. armor 10"
+cost = 1
+cooldown_sec = 8.0
+effects = [{
+"buff_type": "clothing",
+"type": "charge",
+"value": 2
+}, {
+"type": "shield",
+"value": 10
+}]
+tags = Array[String](["friend", "charge", "shield"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://bsst6h5528siw"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_rrmsk"]
+
+[resource]
+script = ExtResource("1_rrmsk")
+id = &"skull_staff"
+name = "Skull Staff"
+description = "Lifesteal 30. Buff a lifesteal by 5."
+cost = 1
+cooldown_sec = 6.5
+effects = [{
+"type": "lifesteal",
+"value": 30
+}, {
+"add_type": "multiple",
+"buff_type": "lifesteal",
+"type": "buff",
+"value": 3
+}]
+tags = Array[String](["weapon", "lifesteal", "magic", "buff"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"

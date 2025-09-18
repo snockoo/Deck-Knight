@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://dvlvvbiak258u"]
+
+[ext_resource type="Script" uid="uid://cxwlc0lad3vmg" path="res://scripts/data/Card.gd" id="1_w84kf"]
+
+[resource]
+script = ExtResource("1_w84kf")
+id = &"giant_belt"
+name = "Giant's Belt"
+description = "At the start of battle maxhp 500"
+cost = 1
+cooldown_sec = 0.1
+effects = [{
+"ammo": 1,
+"type": "maxhp",
+"value": 500
+}, {
+"ammo": 1,
+"type": "heal",
+"value": 500
+}]
+tags = Array[String](["maxhp", "starter", "clothing", "heal"])
+metadata/_custom_type_script = "uid://cxwlc0lad3vmg"
