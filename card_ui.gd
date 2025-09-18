@@ -54,12 +54,10 @@ func _ready():
 	$Panel/Button.mouse_exited.connect(Callable(self, "_on_button_mouse_exited"))
 	
 func _on_button_mouse_entered():
-	print("ADSDS")
 	card_detail.show()
 		
 
 func _on_button_mouse_exited():
-	print("AAAA")
 	card_detail.hide()
 
 

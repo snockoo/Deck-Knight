@@ -146,9 +146,7 @@ func apply_effect(user: Node, target: Node) -> void:
 		if ammo != 0:
 			match effect_type:
 				"damage":
-					#Effects._apply_damage(user,target,effect_value)
-					target.hp -= max(effect_value - target.shield, 0)
-					target.shield = max(target.shield - effect_value, 0)
+					Effects._apply_damage(user,target,effect_value)
 					
 					# Emit the signal after dealing damage.
 					damage_dealt.emit(effect_value, user, target)
@@ -160,24 +158,15 @@ func apply_effect(user: Node, target: Node) -> void:
 						data_changed.emit() # Emit the signal after the value changes.
 
 				"heal":
-					if user.hp > 0:
-						user.hp = min(user.hp + effect_value, user.max_hp)
-						var poisonreduction = ceil(effect_value / 20)
-						user.poison = max(user.poison - poisonreduction, 0)
-					
+					Effects._apply_heal(user,target,effect_value)
+
 					if scaling_per_use > 0:
 						effect_data["value"] += scaling_per_use
 						print("⬆️ Card heal increased to %d." % effect_data["value"])
 						data_changed.emit() # Emit the signal after the value changes.
 					
 				"lifesteal":
-					target.hp -= max(effect_value - target.shield, 0)
-					target.shield = max(target.shield - effect_value, 0)
-					if user.hp > 0:
-						user.hp = min(user.hp + effect_value, user.max_hp)
-						
-					var regenreduction = ceil(effect_value / 20)
-					target.regen = max(target.regen - regenreduction, 0)
+					Effects._apply_lifesteal(user,target,effect_value)
 						
 					# Emit the signal after dealing damage.
 					damage_dealt.emit(effect_value, user, target)
@@ -195,7 +184,7 @@ func apply_effect(user: Node, target: Node) -> void:
 						effect_data["value"] += scaling_per_use
 						data_changed.emit() # Emit the signal after the value changes.
 				"shield":
-					user.shield += effect_value
+					Effects._apply_shield(user,target,effect_value)
 					
 					if scaling_per_use > 0:
 						effect_data["value"] += scaling_per_use
@@ -216,19 +205,19 @@ func apply_effect(user: Node, target: Node) -> void:
 						effect_data["value"] += scaling_per_use
 						data_changed.emit() # Emit the signal after the value changes.
 				"burn":
-					target.burn += effect_value
+					Effects._apply_burn(user,target,effect_value)
 					# Apply scaling if it exists
 					if scaling_per_use > 0:
 						effect_data["value"] += scaling_per_use
 						data_changed.emit() # Emit the signal after the value changes.
 				"regen":
-					user.regen += effect_value
+					Effects._apply_regen(user,target,effect_value)
 					# Apply scaling if it exists
 					if scaling_per_use > 0:
 						effect_data["value"] += scaling_per_use
 						data_changed.emit() # Emit the signal after the value changes.
 				"poison":
-					target.poison += effect_value
+					Effects._apply_poison(user,target,effect_value)
 					# Apply scaling if it exists
 					if scaling_per_use > 0:
 						effect_data["value"] += scaling_per_use
@@ -238,7 +227,7 @@ func apply_effect(user: Node, target: Node) -> void:
 				"additive":
 					additive_requested.emit(user, buff_type, effect_value, tags_type, add_type, self)
 				"maxhp":
-					user.max_hp += effect_value
+					Effects._apply_maxhp(user,target,effect_value)
 					if scaling_per_use > 0:
 						effect_data["value"] += scaling_per_use
 						data_changed.emit() # Emit the signal after the value changes.
