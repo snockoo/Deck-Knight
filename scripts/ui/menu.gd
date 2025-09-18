@@ -41,7 +41,7 @@ func _on_start_button_pressed():
 	#GameState.deck_limit = 20
 	
 	# Load original cards
-	var starting_cards = [sturdysword,claymore,healprayer,roundshield,shortbow,trollskin]
+	var starting_cards = [sturdysword,claymore,healprayer,roundshield]
 	for cards in starting_cards:
 		# Create the duplicated card first
 		var duplicated_card = cards.duplicate(true)
