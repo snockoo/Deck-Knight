@@ -1,27 +1,27 @@
 [gd_scene load_steps=14 format=3 uid="uid://be7su53veybjo"]
 
-[ext_resource type="Script" uid="uid://d3tdtoujuif82" path="res://deckbuilding.gd" id="1_6yap2"]
-[ext_resource type="Texture2D" uid="uid://cul1v7ey8hgtp" path="res://assets/sprites/UI_TravelBook_BookCover01a.png" id="1_jk6il"]
-[ext_resource type="Texture2D" uid="uid://yyx6kv163jb8" path="res://assets/sprites/UI_TravelBook_FrameSelect01a.png" id="3_3ibo3"]
-[ext_resource type="FontFile" uid="uid://mcoukv50aceg" path="res://assets/fonts/PixelOperator8.ttf" id="3_813h3"]
-[ext_resource type="Texture2D" uid="uid://csfbf4q2acpl1" path="res://assets/sprites/UI_TravelBook_FrameSelect01b.png" id="3_udoxa"]
-[ext_resource type="Texture2D" uid="uid://dpki0xsx23s2w" path="res://assets/sprites/UI_TravelBook_Frame01a.png" id="4_813h3"]
-[ext_resource type="Texture2D" uid="uid://btntl2i524e4c" path="res://assets/sprites/UI_TravelBook_Popup01a.png" id="4_f0n3k"]
-[ext_resource type="FontFile" uid="uid://c4ht708w1wbb1" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="8_hqagp"]
+[ext_resource type="Script" uid="uid://d3tdtoujuif82" path="res://scripts/ui/deckbuilding.gd" id="1_4bt4s"]
+[ext_resource type="Texture2D" uid="uid://cul1v7ey8hgtp" path="res://assets/sprites/UI_TravelBook_BookCover01a.png" id="2_4umnk"]
+[ext_resource type="FontFile" uid="uid://mcoukv50aceg" path="res://assets/fonts/PixelOperator8.ttf" id="3_edbar"]
+[ext_resource type="Texture2D" uid="uid://btntl2i524e4c" path="res://assets/sprites/UI_TravelBook_Popup01a.png" id="4_ioykq"]
+[ext_resource type="Texture2D" uid="uid://yyx6kv163jb8" path="res://assets/sprites/UI_TravelBook_FrameSelect01a.png" id="5_fnr5u"]
+[ext_resource type="Texture2D" uid="uid://dpki0xsx23s2w" path="res://assets/sprites/UI_TravelBook_Frame01a.png" id="6_hefyd"]
+[ext_resource type="Texture2D" uid="uid://csfbf4q2acpl1" path="res://assets/sprites/UI_TravelBook_FrameSelect01b.png" id="7_i2s1q"]
+[ext_resource type="FontFile" uid="uid://c4ht708w1wbb1" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="8_34r0n"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ptpel"]
-texture = ExtResource("4_f0n3k")
+texture = ExtResource("4_ioykq")
 expand_margin_left = 5.0
 expand_margin_right = 5.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f0n3k"]
-texture = ExtResource("3_3ibo3")
+texture = ExtResource("5_fnr5u")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hqagp"]
-texture = ExtResource("4_813h3")
+texture = ExtResource("6_hefyd")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hg6jy"]
-texture = ExtResource("3_udoxa")
+texture = ExtResource("7_i2s1q")
 
 [sub_resource type="Theme" id="Theme_f0n3k"]
 
@@ -32,7 +32,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_6yap2")
+script = ExtResource("1_4bt4s")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -41,7 +41,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_jk6il")
+texture = ExtResource("2_4umnk")
 expand_mode = 3
 
 [node name="Warnings" type="Label" parent="."]
@@ -51,7 +51,7 @@ offset_top = 746.0
 offset_right = 1497.0
 offset_bottom = 805.0
 theme_override_colors/font_color = Color(0.247059, 0.247059, 0.247059, 1)
-theme_override_fonts/font = ExtResource("3_813h3")
+theme_override_fonts/font = ExtResource("3_edbar")
 theme_override_font_sizes/font_size = 12
 theme_override_styles/normal = SubResource("StyleBoxTexture_ptpel")
 text = "Deck Size: 2"
@@ -73,7 +73,7 @@ offset_bottom = 396.0
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.247059, 0.247059, 0.247059, 1)
-theme_override_fonts/font = ExtResource("3_813h3")
+theme_override_fonts/font = ExtResource("3_edbar")
 theme_override_font_sizes/font_size = 22
 theme_override_styles/hover = SubResource("StyleBoxTexture_f0n3k")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_hqagp")
@@ -95,7 +95,7 @@ offset_bottom = 396.0
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.247059, 0.247059, 0.247059, 1)
-theme_override_fonts/font = ExtResource("3_813h3")
+theme_override_fonts/font = ExtResource("3_edbar")
 theme_override_font_sizes/font_size = 22
 theme_override_styles/hover = SubResource("StyleBoxTexture_f0n3k")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_hqagp")
@@ -108,7 +108,7 @@ offset_left = 60.0
 offset_top = 132.0
 offset_right = 400.0
 offset_bottom = 172.0
-theme_override_fonts/font = ExtResource("3_813h3")
+theme_override_fonts/font = ExtResource("3_edbar")
 theme_override_font_sizes/font_size = 32
 text = "Owned Cards: "
 
@@ -135,7 +135,7 @@ offset_left = 60.0
 offset_top = 439.0
 offset_right = 400.0
 offset_bottom = 524.0
-theme_override_fonts/font = ExtResource("3_813h3")
+theme_override_fonts/font = ExtResource("3_edbar")
 theme_override_font_sizes/font_size = 32
 text = "Current Deck:"
 
@@ -161,7 +161,7 @@ offset_top = 50.0
 offset_right = 170.0
 offset_bottom = 90.0
 grow_horizontal = 2
-theme_override_fonts/font = ExtResource("8_hqagp")
+theme_override_fonts/font = ExtResource("8_34r0n")
 theme_override_font_sizes/font_size = 32
 text = "Level"
 horizontal_alignment = 1

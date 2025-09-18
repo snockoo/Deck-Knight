@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://b1iv5j3swl7ky"]
 
-[ext_resource type="Script" uid="uid://f4kjslvcuegp" path="res://reward.gd" id="1_jggsb"]
-[ext_resource type="Texture2D" uid="uid://cul1v7ey8hgtp" path="res://assets/sprites/UI_TravelBook_BookCover01a.png" id="1_qc4im"]
-[ext_resource type="FontFile" uid="uid://mcoukv50aceg" path="res://assets/fonts/PixelOperator8.ttf" id="2_6f2bs"]
+[ext_resource type="Script" uid="uid://f4kjslvcuegp" path="res://scripts/ui/reward.gd" id="1_6gis2"]
+[ext_resource type="Texture2D" uid="uid://cul1v7ey8hgtp" path="res://assets/sprites/UI_TravelBook_BookCover01a.png" id="2_alqe5"]
+[ext_resource type="FontFile" uid="uid://mcoukv50aceg" path="res://assets/fonts/PixelOperator8.ttf" id="3_01wlk"]
 
 [node name="Reward" type="Control"]
 layout_mode = 3
@@ -11,7 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_jggsb")
+script = ExtResource("1_6gis2")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -20,7 +20,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_qc4im")
+texture = ExtResource("2_alqe5")
 expand_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
@@ -39,7 +39,7 @@ grow_vertical = 2
 
 [node name="Label" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_6f2bs")
+theme_override_fonts/font = ExtResource("3_01wlk")
 theme_override_font_sizes/font_size = 32
 text = "Choose Your Reward"
 horizontal_alignment = 1
@@ -63,7 +63,7 @@ offset_right = 334.0
 offset_bottom = 71.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_fonts/font = ExtResource("2_6f2bs")
+theme_override_fonts/font = ExtResource("3_01wlk")
 theme_override_font_sizes/font_size = 32
 text = "Or Buff Your Current Cards"
 horizontal_alignment = 1

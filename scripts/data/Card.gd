@@ -125,7 +125,7 @@ func get_dynamic_description() -> String:
 		else:
 			if ammo >= 0:
 				desc += " Uses: %d." % [ammo]
-		
+		#print(desc)
 	return desc
 # ---- (Optional) Helper for applying the effect later ----
 # We'll call this from a Battle/Board manager and pass targets.

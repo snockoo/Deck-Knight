@@ -1,21 +1,21 @@
 [gd_scene load_steps=11 format=3 uid="uid://d1rg4lxlia0hs"]
 
-[ext_resource type="Script" uid="uid://n8283bh66u4f" path="res://finishscreen.gd" id="1_874qs"]
-[ext_resource type="Texture2D" uid="uid://cul1v7ey8hgtp" path="res://assets/sprites/UI_TravelBook_BookCover01a.png" id="2_qyhvy"]
-[ext_resource type="FontFile" uid="uid://c4ht708w1wbb1" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="3_roice"]
-[ext_resource type="FontFile" uid="uid://mcoukv50aceg" path="res://assets/fonts/PixelOperator8.ttf" id="4_8bpcb"]
-[ext_resource type="Texture2D" uid="uid://yyx6kv163jb8" path="res://assets/sprites/UI_TravelBook_FrameSelect01a.png" id="5_qj1a8"]
-[ext_resource type="Texture2D" uid="uid://dpki0xsx23s2w" path="res://assets/sprites/UI_TravelBook_Frame01a.png" id="6_0j5wa"]
-[ext_resource type="Texture2D" uid="uid://csfbf4q2acpl1" path="res://assets/sprites/UI_TravelBook_FrameSelect01b.png" id="7_7n124"]
+[ext_resource type="Script" uid="uid://n8283bh66u4f" path="res://scripts/ui/finishscreen.gd" id="1_nkba4"]
+[ext_resource type="Texture2D" uid="uid://cul1v7ey8hgtp" path="res://assets/sprites/UI_TravelBook_BookCover01a.png" id="2_bld3k"]
+[ext_resource type="FontFile" uid="uid://c4ht708w1wbb1" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="3_p6ku6"]
+[ext_resource type="FontFile" uid="uid://mcoukv50aceg" path="res://assets/fonts/PixelOperator8.ttf" id="4_3nmmj"]
+[ext_resource type="Texture2D" uid="uid://yyx6kv163jb8" path="res://assets/sprites/UI_TravelBook_FrameSelect01a.png" id="5_tevba"]
+[ext_resource type="Texture2D" uid="uid://dpki0xsx23s2w" path="res://assets/sprites/UI_TravelBook_Frame01a.png" id="6_05rat"]
+[ext_resource type="Texture2D" uid="uid://csfbf4q2acpl1" path="res://assets/sprites/UI_TravelBook_FrameSelect01b.png" id="7_per8m"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_55awj"]
-texture = ExtResource("5_qj1a8")
+texture = ExtResource("5_tevba")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cq4s1"]
-texture = ExtResource("6_0j5wa")
+texture = ExtResource("6_05rat")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3qb4v"]
-texture = ExtResource("7_7n124")
+texture = ExtResource("7_per8m")
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -24,7 +24,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_874qs")
+script = ExtResource("1_nkba4")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -33,7 +33,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_qyhvy")
+texture = ExtResource("2_bld3k")
 expand_mode = 3
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
@@ -50,7 +50,7 @@ theme_override_constants/separation = 50
 
 [node name="Congratulations" type="Label" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("3_roice")
+theme_override_fonts/font = ExtResource("3_p6ku6")
 theme_override_font_sizes/font_size = 100
 text = "Congratulations!"
 horizontal_alignment = 1
@@ -58,7 +58,7 @@ vertical_alignment = 1
 
 [node name="Level" type="Label" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("3_roice")
+theme_override_fonts/font = ExtResource("3_p6ku6")
 theme_override_font_sizes/font_size = 64
 text = "You beat X Levels!"
 horizontal_alignment = 1
@@ -69,7 +69,7 @@ custom_minimum_size = Vector2(300, 50)
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0.2484, 0.2484, 0.2484, 1)
-theme_override_fonts/font = ExtResource("4_8bpcb")
+theme_override_fonts/font = ExtResource("4_3nmmj")
 theme_override_font_sizes/font_size = 22
 theme_override_styles/hover = SubResource("StyleBoxTexture_55awj")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_cq4s1")
@@ -82,7 +82,7 @@ custom_minimum_size = Vector2(300, 50)
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0.2484, 0.2484, 0.2484, 1)
-theme_override_fonts/font = ExtResource("4_8bpcb")
+theme_override_fonts/font = ExtResource("4_3nmmj")
 theme_override_font_sizes/font_size = 22
 theme_override_styles/hover = SubResource("StyleBoxTexture_55awj")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_cq4s1")

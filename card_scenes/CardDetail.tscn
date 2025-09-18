@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://ctcrxwluhximr"]
 
-[ext_resource type="Texture2D" uid="uid://2h87snpo3u25" path="res://assets/sprites/20250822_2008_Rectangular_Pixel_Art_remix_01k38y6wq2e84ay6j14txya5c8-removebg-preview (1).png" id="1_5k8vh"]
-[ext_resource type="FontFile" uid="uid://mcoukv50aceg" path="res://assets/fonts/PixelOperator8.ttf" id="2_nf43n"]
+[ext_resource type="Texture2D" uid="uid://2h87snpo3u25" path="res://assets/sprites/20250822_2008_Rectangular_Pixel_Art_remix_01k38y6wq2e84ay6j14txya5c8-removebg-preview (1).png" id="1_1wfxy"]
+[ext_resource type="FontFile" uid="uid://mcoukv50aceg" path="res://assets/fonts/PixelOperator8.ttf" id="2_7y0ed"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -25,7 +25,7 @@ anchor_bottom = 1.0
 offset_right = 3.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_5k8vh")
+texture = ExtResource("1_1wfxy")
 expand_mode = 3
 
 [node name="LabelName" type="Label" parent="Panel"]
@@ -34,7 +34,7 @@ offset_left = 5.0
 offset_top = 12.0
 offset_right = 331.0
 offset_bottom = 35.0
-theme_override_fonts/font = ExtResource("2_nf43n")
+theme_override_fonts/font = ExtResource("2_7y0ed")
 theme_override_font_sizes/font_size = 14
 horizontal_alignment = 1
 autowrap_mode = 3
@@ -52,7 +52,7 @@ offset_bottom = -28.0
 grow_horizontal = 2
 grow_vertical = 0
 size_flags_vertical = 2
-theme_override_fonts/font = ExtResource("2_nf43n")
+theme_override_fonts/font = ExtResource("2_7y0ed")
 theme_override_font_sizes/font_size = 8
 autowrap_mode = 3
 
@@ -62,7 +62,7 @@ offset_left = 13.0
 offset_top = 150.0
 offset_right = 332.0
 offset_bottom = 166.0
-theme_override_fonts/font = ExtResource("2_nf43n")
+theme_override_fonts/font = ExtResource("2_7y0ed")
 theme_override_font_sizes/font_size = 8
 text = "Tags: "
 vertical_alignment = 1
@@ -73,7 +73,7 @@ layout_mode = 2
 offset_top = 167.0
 offset_right = 332.0
 offset_bottom = 190.0
-theme_override_fonts/font = ExtResource("2_nf43n")
+theme_override_fonts/font = ExtResource("2_7y0ed")
 theme_override_font_sizes/font_size = 12
 horizontal_alignment = 1
 vertical_alignment = 1

@@ -1,21 +1,21 @@
 [gd_scene load_steps=12 format=3 uid="uid://byxw46rih2qg"]
 
-[ext_resource type="Script" uid="uid://bbri3bj2601ag" path="res://pvpmenu.gd" id="1_uspax"]
-[ext_resource type="Texture2D" uid="uid://cul1v7ey8hgtp" path="res://assets/sprites/UI_TravelBook_BookCover01a.png" id="1_vhig4"]
-[ext_resource type="FontFile" uid="uid://c4ht708w1wbb1" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_uspax"]
-[ext_resource type="FontFile" uid="uid://mcoukv50aceg" path="res://assets/fonts/PixelOperator8.ttf" id="3_8hfpc"]
-[ext_resource type="Texture2D" uid="uid://yyx6kv163jb8" path="res://assets/sprites/UI_TravelBook_FrameSelect01a.png" id="4_mixsa"]
-[ext_resource type="Texture2D" uid="uid://dpki0xsx23s2w" path="res://assets/sprites/UI_TravelBook_Frame01a.png" id="5_fqy51"]
-[ext_resource type="Texture2D" uid="uid://csfbf4q2acpl1" path="res://assets/sprites/UI_TravelBook_FrameSelect01b.png" id="6_ajh3d"]
+[ext_resource type="Script" uid="uid://bbri3bj2601ag" path="res://scripts/ui/pvpmenu.gd" id="1_0lfjd"]
+[ext_resource type="Texture2D" uid="uid://cul1v7ey8hgtp" path="res://assets/sprites/UI_TravelBook_BookCover01a.png" id="2_7ogfn"]
+[ext_resource type="FontFile" uid="uid://c4ht708w1wbb1" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="3_tmexu"]
+[ext_resource type="FontFile" uid="uid://mcoukv50aceg" path="res://assets/fonts/PixelOperator8.ttf" id="4_6ayv8"]
+[ext_resource type="Texture2D" uid="uid://yyx6kv163jb8" path="res://assets/sprites/UI_TravelBook_FrameSelect01a.png" id="5_rbm3k"]
+[ext_resource type="Texture2D" uid="uid://dpki0xsx23s2w" path="res://assets/sprites/UI_TravelBook_Frame01a.png" id="6_anjl0"]
+[ext_resource type="Texture2D" uid="uid://csfbf4q2acpl1" path="res://assets/sprites/UI_TravelBook_FrameSelect01b.png" id="7_rc3uc"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2npym"]
-texture = ExtResource("4_mixsa")
+texture = ExtResource("5_rbm3k")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8nku8"]
-texture = ExtResource("5_fqy51")
+texture = ExtResource("6_anjl0")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4i5mc"]
-texture = ExtResource("6_ajh3d")
+texture = ExtResource("7_rc3uc")
 
 [sub_resource type="Theme" id="Theme_uspax"]
 
@@ -26,7 +26,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_uspax")
+script = ExtResource("1_0lfjd")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -35,7 +35,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_vhig4")
+texture = ExtResource("2_7ogfn")
 expand_mode = 3
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
@@ -51,14 +51,14 @@ theme_override_constants/separation = 25
 
 [node name="Player1" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_uspax")
+theme_override_fonts/font = ExtResource("3_tmexu")
 theme_override_font_sizes/font_size = 48
 text = "Player 1 Deck:"
 vertical_alignment = 1
 
 [node name="DeckStatus1" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_uspax")
+theme_override_fonts/font = ExtResource("3_tmexu")
 theme_override_font_sizes/font_size = 28
 text = "Not Loaded"
 vertical_alignment = 1
@@ -68,7 +68,7 @@ custom_minimum_size = Vector2(300, 50)
 layout_mode = 2
 size_flags_horizontal = 0
 theme_override_colors/font_color = Color(0.2484, 0.2484, 0.2484, 1)
-theme_override_fonts/font = ExtResource("3_8hfpc")
+theme_override_fonts/font = ExtResource("4_6ayv8")
 theme_override_font_sizes/font_size = 22
 theme_override_styles/hover = SubResource("StyleBoxTexture_2npym")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_8nku8")
@@ -109,14 +109,14 @@ theme_override_constants/separation = 25
 
 [node name="Player2" type="Label" parent="VBoxContainer2"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_uspax")
+theme_override_fonts/font = ExtResource("3_tmexu")
 theme_override_font_sizes/font_size = 48
 text = "Player 2 Deck:"
 vertical_alignment = 1
 
 [node name="DeckStatus2" type="Label" parent="VBoxContainer2"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_uspax")
+theme_override_fonts/font = ExtResource("3_tmexu")
 theme_override_font_sizes/font_size = 28
 text = "Not Loaded"
 vertical_alignment = 1
@@ -126,7 +126,7 @@ custom_minimum_size = Vector2(300, 50)
 layout_mode = 2
 size_flags_horizontal = 0
 theme_override_colors/font_color = Color(0.2484, 0.2484, 0.2484, 1)
-theme_override_fonts/font = ExtResource("3_8hfpc")
+theme_override_fonts/font = ExtResource("4_6ayv8")
 theme_override_font_sizes/font_size = 22
 theme_override_styles/hover = SubResource("StyleBoxTexture_2npym")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_8nku8")
@@ -167,7 +167,7 @@ grow_horizontal = 0
 grow_vertical = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0.2484, 0.2484, 0.2484, 1)
-theme_override_fonts/font = ExtResource("3_8hfpc")
+theme_override_fonts/font = ExtResource("4_6ayv8")
 theme_override_font_sizes/font_size = 22
 theme_override_styles/hover = SubResource("StyleBoxTexture_2npym")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_8nku8")
@@ -191,7 +191,7 @@ grow_horizontal = 0
 grow_vertical = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0.2484, 0.2484, 0.2484, 1)
-theme_override_fonts/font = ExtResource("3_8hfpc")
+theme_override_fonts/font = ExtResource("4_6ayv8")
 theme_override_font_sizes/font_size = 22
 theme_override_styles/hover = SubResource("StyleBoxTexture_2npym")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_8nku8")

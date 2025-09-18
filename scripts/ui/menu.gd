@@ -54,13 +54,13 @@ func _on_start_button_pressed():
 
 
 	# Load the main game scene and change to it.
-	get_tree().change_scene_to_file("res://deckbuilding.tscn")
+	get_tree().change_scene_to_file("res://scenes/deckbuilding.tscn")
 
 func _on_pvp_button_pressed():
-	get_tree().change_scene_to_file("res://pvpmenu.tscn")
+	get_tree().change_scene_to_file("res://scenes/pvpmenu.tscn")
 	
 func _on_guide_button_pressed():
-	get_tree().change_scene_to_file("res://guide.tscn")
+	get_tree().change_scene_to_file("res://scenes/guide.tscn")
 
 func _on_exit_button_pressed():
 	get_tree().quit()

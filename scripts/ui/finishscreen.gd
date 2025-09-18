@@ -42,4 +42,4 @@ func _on_save_deck_button_pressed():
 		print("Error saving deck file.")
 
 func _on_main_menu_button_pressed():
-	get_tree().change_scene_to_file("res://menu.tscn")
+	get_tree().change_scene_to_file("res://scenes/menu.tscn")

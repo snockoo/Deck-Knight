@@ -2,7 +2,7 @@ extends Control
 
 @onready var reward_container = $VBoxContainer/EnemyDeck
 @onready var current_deck = $ScrollContainer/CurrentDeck
-var card_ui_scene = preload("res://CardUI.tscn")
+var card_ui_scene = preload("res://card_scenes/CardUI.tscn"	)
 
 func _ready():
 	# Get a list of unique cards from the enemy's deck
@@ -40,7 +40,7 @@ func _on_card_selected(chosen_card_data):
 	# Add the corrected duplicated card to your GameState
 	GameState.allcards.append(duplicated_card)
 	# Change the scene back to the deck builder
-	get_tree().change_scene_to_file("res://deckbuilding.tscn")
+	get_tree().change_scene_to_file("res://scenes/deckbuilding.tscn")
 
 func _display_player_deck():
 	for card_data in GameState.player_deck:
@@ -87,5 +87,5 @@ func _on_player_card_clicked(card_data_to_buff):
 			
 			
 			# Exit the screen after buffing one card
-			get_tree().change_scene_to_file("res://deckbuilding.tscn")
+			get_tree().change_scene_to_file("res://scenes/deckbuilding.tscn")
 			return

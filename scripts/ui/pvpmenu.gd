@@ -10,7 +10,7 @@ extends Control
 
 @onready var player1_deck = $ScrollContainer/Binder
 @onready var player2_deck = $ScrollContainer2/Binder2
-var card_ui_scene = preload("res://CardUI.tscn")
+var card_ui_scene = preload("res://card_scenes/CardUI.tscn")
 
 var pvp_player1_deck: Array[Card] = []
 var pvp_player2_deck: Array[Card] = []
@@ -133,4 +133,4 @@ func _on_start_battle_pressed():
 	get_tree().change_scene_to_file("res://scenes/main.tscn")
 
 func _on_back_pressed():
-	get_tree().change_scene_to_file("res://menu.tscn")
+	get_tree().change_scene_to_file("res://scenes/menu.tscn")

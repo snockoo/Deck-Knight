@@ -5,11 +5,11 @@ extends Node
 # Reference the HBoxContainer from the scene tree
 @onready var enemy_hand_container = $HUD/ScrollContainer/EnemyHandContainer
 # Load the CardUI scene
-var card_ui_scene = preload("res://CardUI.tscn")
+var card_ui_scene = preload("res://card_scenes/CardUI.tscn")
 # Preload the health bar scene so you can instantiate it
-var health_bar_scene = preload("res://HealthBar.tscn")
+var health_bar_scene = preload("res://card_scenes/HealthBar.tscn")
 # Preload floating text
-var floating_text_scene = preload("res://floating_text.tscn")
+var floating_text_scene = preload("res://card_scenes/floating_text.tscn")
 
 var player_hand_uis: Array = []  # New: Array for CardUI instances
 var enemy_deck_uis: Array = []    # New: Array for Enemy CardUI instances
@@ -25,10 +25,6 @@ var enemy_deck_uis: Array = []    # New: Array for Enemy CardUI instances
 @onready var player_portrait = $HUD/BorderPlayer/PlayerPortrait
 @onready var player_name_label = $HUD/PlayerNameLabel
 @onready var player_border = $HUD/BorderPlayer
-
-# Reference to your tooltip scene
-var card_tooltip_scene = preload("res://card_tooltip.tscn")
-var current_tooltip_instance = null
 
 #Finish Button
 @onready var finish_button = $HUD/Finish
@@ -712,28 +708,6 @@ func _on_card_used(user, target, card_ui_instance):
 			text = "Increased Max HP by %d" % effect.value
 			show_floating_text(str(text), Color.SEA_GREEN, card_ui_position)
 	
-func _on_card_hovered(card_data):
-	# Clean up any existing tooltip just in case
-	if is_instance_valid(current_tooltip_instance):
-		current_tooltip_instance.queue_free()
-		
-	# Instantiate the tooltip scene
-	current_tooltip_instance = card_tooltip_scene.instantiate()
-	$HUD.add_child(current_tooltip_instance)
-	print(card_data.name)
-	# Update the tooltip's content
-	current_tooltip_instance.get_node("VBoxContainer/NameLabel").text = card_data.name
-	current_tooltip_instance.get_node("VBoxContainer/DescriptionLabel").text = card_data.description
-	
-	# You can also show the tags here
-	var tags_string = ", ".join(card_data.tags)
-	current_tooltip_instance.get_node("VBoxContainer/TagsLabel").text = tags_string
-
-func _on_card_hover_exited():
-	# Hide the tooltip by freeing it
-	if is_instance_valid(current_tooltip_instance):
-		current_tooltip_instance.queue_free()
-		current_tooltip_instance = null
 
 # Show the floating text at the card's position
 func show_floating_text(text_content: String, text_color: Color, position: Vector2):
@@ -744,7 +718,7 @@ func show_floating_text(text_content: String, text_color: Color, position: Vecto
 
 func _on_finish_button_pressed():
 	if GameState.pvpmode:
-		get_tree().change_scene_to_file("res://pvpmenu.tscn")
+		get_tree().change_scene_to_file("res://scenes/pvpmenu.tscn")
 		GameState.pvpmode = false
 		GameState.player1name = "Player"
 		GameState.player2name = "Player2"
@@ -756,7 +730,7 @@ func _on_finish_button_pressed():
 				GameState.deck_limit += 1
 			GameState.current_level += 1
 			
-			get_tree().change_scene_to_file("res://reward.tscn")
+			get_tree().change_scene_to_file("res://scenes/reward.tscn")
 		else:
 			GameState.lives -= 1
-			get_tree().change_scene_to_file("res://deckbuilding.tscn")
+			get_tree().change_scene_to_file("res://scenes/deckbuilding.tscn")

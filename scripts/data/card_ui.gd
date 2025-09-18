@@ -47,7 +47,10 @@ func _ready():
 	$CardDetails/DetailDesc.text = original_desc
 	$CardDetails/DetailTags.text = original_tags
 	$CardDetails/DetailCost.text = original_cost
+	
+	card_data.data_changed.connect(Callable(self, "_update_ui"))
 	_update_ui()
+	
 	#card_detail.hide()
 	$Panel/Button.pressed.connect(Callable(self, "_on_button_pressed"))
 	$Panel/Button.mouse_entered.connect(Callable(self, "_on_button_mouse_entered"))

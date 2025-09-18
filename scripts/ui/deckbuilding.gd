@@ -14,7 +14,7 @@ extends Control
 @onready var level_label = $Level
 
 # Load the CardUI scene
-var card_ui_scene = preload("res://CardUI.tscn")
+var card_ui_scene = preload("res://card_scenes/CardUI.tscn")
 
 var binder_uis: Array = []  # New: Array for CardUI instances
 
@@ -52,10 +52,10 @@ func _on_battle_button_pressed():
 		GameState.player_deck = selected_cards
 		if GameState.current_level == 14:
 			# Change the scene to finish screen for deck saving
-			get_tree().change_scene_to_file("res://finishscreen.tscn")
+			get_tree().change_scene_to_file("res://scenes/finishscreen.tscn")
 		else:
 			# Now, change the scene to the main battle scene.
-			get_tree().change_scene_to_file("res://pathselect.tscn")
+			get_tree().change_scene_to_file("res://scenes/pathselect.tscn")
 	else:
 		message_label.text = "You have no more Lives!"
 		message_label.add_theme_color_override("font_color", Color.RED)
@@ -65,7 +65,7 @@ func _on_retire_button_pressed():
 	# Pass the selected cards to the global GameState.
 	GameState.player_deck = selected_cards
 
-	get_tree().change_scene_to_file("res://finishscreen.tscn")
+	get_tree().change_scene_to_file("res://scenes/finishscreen.tscn")
 
 
 func _on_card_added(card_data):

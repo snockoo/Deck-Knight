@@ -1,22 +1,22 @@
 [gd_scene load_steps=12 format=3 uid="uid://c2foxok23u4ut"]
 
-[ext_resource type="Script" uid="uid://dpi0yetpye4oc" path="res://guide.gd" id="1_de3e4"]
-[ext_resource type="Texture2D" uid="uid://cul1v7ey8hgtp" path="res://assets/sprites/UI_TravelBook_BookCover01a.png" id="1_feuw2"]
-[ext_resource type="Texture2D" uid="uid://bgefh5dww6ehq" path="res://assets/sprites/CardExample.png" id="2_83y8a"]
-[ext_resource type="FontFile" uid="uid://c4ht708w1wbb1" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_gajip"]
-[ext_resource type="FontFile" uid="uid://mcoukv50aceg" path="res://assets/fonts/PixelOperator8.ttf" id="3_83y8a"]
-[ext_resource type="Texture2D" uid="uid://yyx6kv163jb8" path="res://assets/sprites/UI_TravelBook_FrameSelect01a.png" id="5_rn84f"]
-[ext_resource type="Texture2D" uid="uid://dpki0xsx23s2w" path="res://assets/sprites/UI_TravelBook_Frame01a.png" id="6_de3e4"]
-[ext_resource type="Texture2D" uid="uid://csfbf4q2acpl1" path="res://assets/sprites/UI_TravelBook_FrameSelect01b.png" id="7_t7llt"]
+[ext_resource type="Script" uid="uid://dpi0yetpye4oc" path="res://scripts/ui/guide.gd" id="1_6dbe5"]
+[ext_resource type="Texture2D" uid="uid://cul1v7ey8hgtp" path="res://assets/sprites/UI_TravelBook_BookCover01a.png" id="2_l7vi7"]
+[ext_resource type="Texture2D" uid="uid://bgefh5dww6ehq" path="res://assets/sprites/CardExample.png" id="3_r53ya"]
+[ext_resource type="FontFile" uid="uid://c4ht708w1wbb1" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="4_q78cb"]
+[ext_resource type="FontFile" uid="uid://mcoukv50aceg" path="res://assets/fonts/PixelOperator8.ttf" id="5_6pof1"]
+[ext_resource type="Texture2D" uid="uid://yyx6kv163jb8" path="res://assets/sprites/UI_TravelBook_FrameSelect01a.png" id="6_de1p0"]
+[ext_resource type="Texture2D" uid="uid://dpki0xsx23s2w" path="res://assets/sprites/UI_TravelBook_Frame01a.png" id="7_qvdyg"]
+[ext_resource type="Texture2D" uid="uid://csfbf4q2acpl1" path="res://assets/sprites/UI_TravelBook_FrameSelect01b.png" id="8_aa7l8"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ql8b2"]
-texture = ExtResource("5_rn84f")
+texture = ExtResource("6_de1p0")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4xiro"]
-texture = ExtResource("6_de3e4")
+texture = ExtResource("7_qvdyg")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0rcq0"]
-texture = ExtResource("7_t7llt")
+texture = ExtResource("8_aa7l8")
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -25,7 +25,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_de3e4")
+script = ExtResource("1_6dbe5")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -34,7 +34,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_feuw2")
+texture = ExtResource("2_l7vi7")
 expand_mode = 3
 
 [node name="Card" type="TextureRect" parent="."]
@@ -45,7 +45,7 @@ offset_top = 200.0
 offset_right = 212.0
 offset_bottom = 401.0
 size_flags_horizontal = 4
-texture = ExtResource("2_83y8a")
+texture = ExtResource("3_r53ya")
 stretch_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
@@ -63,7 +63,7 @@ theme_override_constants/separation = 50
 
 [node name="Title" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_gajip")
+theme_override_fonts/font = ExtResource("4_q78cb")
 theme_override_font_sizes/font_size = 64
 text = "Guide"
 horizontal_alignment = 1
@@ -73,8 +73,8 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_fonts/normal_font = ExtResource("3_83y8a")
-theme_override_fonts/bold_font = ExtResource("2_gajip")
+theme_override_fonts/normal_font = ExtResource("5_6pof1")
+theme_override_fonts/bold_font = ExtResource("4_q78cb")
 text = "This is an autobattler game where you build your deck and battle against other opponents while your cards activate automatically according to their cooldown. The goal is to empty your opponent's health bar.
 
 
@@ -131,7 +131,7 @@ grow_horizontal = 0
 grow_vertical = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0.2484, 0.2484, 0.2484, 1)
-theme_override_fonts/font = ExtResource("3_83y8a")
+theme_override_fonts/font = ExtResource("5_6pof1")
 theme_override_font_sizes/font_size = 22
 theme_override_styles/hover = SubResource("StyleBoxTexture_ql8b2")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_4xiro")
